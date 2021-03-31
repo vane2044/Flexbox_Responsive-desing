@@ -1,0 +1,107 @@
+html {
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(122, 185, 236);
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  float: left;
+  background: rgb(122, 150, 236);
+}
+
+nav {
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: lightsalmon;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+}
+
+article {
+  float: left;
+  width: 100%;
+  background: burlywood;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+
+.feature {
+  text-align: center;
+  background: rgb(19, 11, 255);
+  color: white;
+  margin: 8px;
+  height: 24px;
+}
+
+aside {
+  display: none;
+  float: left;
+  width: 20%;
+  background: lightcoral;
+  height: 150px;
+  padding: 8px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  article {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  aside {
+    display: block;
+  }
+
+  .feature {
+    background: rgb(123, 7, 215);
+    width: calc(50% - 16px);
+  }
+
+  .feature:nth-of-type(3) {
+    width: 100%;
+  }
+}
+
+/* Destkop */
+@media (min-width: 769px) {
+  .item {
+    width: 30%;
+  }
+
+  article {
+    justify-content: space-between;
+  }
+
+  .feature {
+    background: rgb(123, 240, 215);
+    width: 30%;
+  }
+
+  .feature:nth-of-type(3) {
+    width: 30%;
+  }
+}
